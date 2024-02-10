@@ -210,7 +210,7 @@ function getHead(arr, n) {
 function getTail(arr, n) {
   return arr.slice(arr.length - n);
 }
-console.log(getTail(['a', 'b', 'c', 'd'], 0));
+// console.log(getTail(['a', 'b', 'c', 'd'], 0));
 
 /**
  * Returns the doubled array - elements of the specified array

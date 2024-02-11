@@ -617,9 +617,9 @@ function sortDigitNamesByNumericOrder(arr) {
  */
 function swapHeadAndTail(arr) {
   const len = Math.floor(arr.length / 2);
-  const head = arr.splice(0, len);
-  const tail = arr.splice(-len);
-  return tail.concat(arr, head);
+  return arr.length % 2 === 0
+    ? arr.slice(len).concat(arr.slice(0, len))
+    : arr.slice(len + 1).concat(arr[len], arr.slice(0, len));
 }
 module.exports = {
   getIntervalArray,
